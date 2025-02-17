@@ -15,25 +15,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>What To Do?</h1>
-        <p id="date-el"></p>
-    </header>
-    <main>
-        <section id="intro">
-            <p>This page offers a notebook web app that you can use to organize your tasks.</p>
-            <p>Simply enter your note in the bar below, and you're off!</p>
-        </section>
-        <section id="input-sec">
-            <input id="title" type="text" placeholder="Type note title...">
-            <textarea id="input" cols="12" rows="5" placeholder="Type note here..."></textarea>
-            <input id="submit-btn" type="submit">
-        </section>
-        <section class="to-do-list">
+    <div class="container">
+        <div class="inner-container">
+            <header>
+                <h1>What To Do?</h1>
+                <p id="date-el"></p>
+            </header>
+            <main>
+                <section id="intro">
+                    <p>This page offers a notebook web app that you can use to organize your tasks.</p>
+                    <p>Simply enter your note in the bar below, and you're off!</p>
+                </section>
+                <section id="input-sec">
+                    <textarea id="input" cols="12" rows="5" placeholder="Type note here..."></textarea>
+                    <input id="submit-btn" type="submit">
+                </section>
+            </div>
+            <section class="to-do-list">
+                
+            </section>
             
-        </section>
-        
-    </main>
+        </main>
+    </div>
     <footer>
         <p>built by <a id="built" href="https://github.com/Turtlewords" target="_blank">Teddy Oliver</a></p>
     </footer>

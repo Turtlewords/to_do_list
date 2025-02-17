@@ -81,9 +81,20 @@ header {
     flex: 1 0 auto;
 }
 
-.note {
-    height: 200px;
-    width: 250px;
+.to-do-list {
+    border: 2px solid red;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    overflow: auto;
+    max-height: 100%;
+}
+
+.item {
+    
+    max-width: 200px;
+    height: 80px;
     background-color: blanchedalmond;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
@@ -100,13 +111,14 @@ footer {
 h1 {
     font-family: "Edu QLD Beginner", serif;
     font-size: 2.75rem;
-    margin-top: 0;
+    margin: 0;
     padding: 3%;
 }
 
 #date-el {
     font-size: 1.8rem;
     font-weight: 600;
+    margin: 0;
 }
 
 #intro p {
@@ -131,5 +143,11 @@ label {
 }
 
 
+
+@media screen and (min-width: 1000px) {
+    .container {
+        display: flex;
+    }
+}
 
 

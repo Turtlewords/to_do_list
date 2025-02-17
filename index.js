@@ -1,13 +1,18 @@
 const dateEl = document.getElementById("date-el");
-const title = document.getElementById("title");
 const input = document.getElementById("input");
 const submitBtn = document.getElementById("submit-btn");
-const notes = document.getElementById("notes");
+
 
 const itemsArray = localStorage.getItem("items") ? JSON.parse(localStorage.getItem("items")) : [];
 
 
+
 submitBtn.addEventListener("click", () => {
+  if (input.value == "") {
+    alert("No empty notes allowed!")
+    return;
+  }
+  
     const item = document.querySelector("#input");
     createItem(item);
 })
@@ -78,8 +83,7 @@ function displayItems(){
     const inputs = document.querySelectorAll(".input-controller textarea");
     cancelBtn.forEach((cb, i) => {
         cb.addEventListener("click", () => {
-            updateController[i].style.display = "none";
-            inputs[i].disabled = true;
+            cancel(inputs, updateController, i);
         })
     })
   }
@@ -91,10 +95,24 @@ function deleteItem(i) {
 }
 
 function updateItem(text, i) {
+  if (text == "") {
+    alert("No empty notes allowed!")
+    return
+  }
     itemsArray[i] = text;
     localStorage.setItem("items", JSON.stringify(itemsArray));
     location.reload();
 }
+
+function cancel(inputs, updateController, i) {
+  if (inputs[i].value == "") {
+    alert("No empty notes allowed!")
+    return
+  }
+  updateController[i].style.display = "none";
+            inputs[i].disabled = true;
+}
+
 
 function displayDate() {
     let date = new Date();
@@ -117,6 +135,8 @@ function addNote() {
                             <button class="edit">Edit</button>
                             <button class="delete">Delete</button>`
 }
+
+
 
 window.onload = function() {
     displayDate();
