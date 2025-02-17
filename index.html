@@ -6,6 +6,7 @@
     <meta name="description" content="A web app for writing and savings notes">
     <title>What To Do?</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@400..700&display=swap" rel="stylesheet">
@@ -16,6 +17,7 @@
 <body>
     <header>
         <h1>What To Do?</h1>
+        <p id="date-el"></p>
     </header>
     <main>
         <section id="intro">
@@ -23,17 +25,18 @@
             <p>Simply enter your note in the bar below, and you're off!</p>
         </section>
         <section id="input-sec">
-            <label for="note" >Enter your note</label>
-            <textarea id="note" cols="12" rows="5" placeholder="Type here..."></textarea>
+            <input id="title" type="text" placeholder="Type note title...">
+            <textarea id="input" cols="12" rows="5" placeholder="Type note here..."></textarea>
             <input id="submit-btn" type="submit">
         </section>
-        <section id="notes">
-
+        <section class="to-do-list">
+            
         </section>
         
     </main>
     <footer>
-        <p>built by <a href="">Teddy Oliver</a></p>
+        <p>built by <a id="built" href="https://github.com/Turtlewords" target="_blank">Teddy Oliver</a></p>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>

@@ -18,17 +18,22 @@
     font-style: normal;
 }
 
+.update-controller {
+    display: none;
+}
+
 body {
     margin: 0;
     padding: 0;
     background-image: url('images/paper.jpg');
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
     text-align: center;
 }
-
 
 
 #intro {
@@ -38,18 +43,30 @@ header {
 #input-sec {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
     width: 80%;
     margin: 1rem auto;
-    text-align: center;
+   
 }
 
-#note {
+#title {
+    margin-top: 1rem;
+    width: 40%;
+    padding: .5rem;
+}
+
+#input {
+    padding: .5rem;
+    width: 80%;
+    max-width: 375px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+   
 }
 
 #submit-btn {
     width: 40%;
+    max-width: 250px;
     margin: 0 auto;
     padding: .75rem;
     font-family: "Edu QLD Beginner", serif; 
@@ -60,9 +77,21 @@ header {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
+#notes {
+    flex: 1 0 auto;
+}
+
+.note {
+    height: 200px;
+    width: 250px;
+    background-color: blanchedalmond;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
 footer {
     margin-top: auto;
     padding: 1%;
+   
 }
 
 
@@ -71,6 +100,13 @@ footer {
 h1 {
     font-family: "Edu QLD Beginner", serif;
     font-size: 2.75rem;
+    margin-top: 0;
+    padding: 3%;
+}
+
+#date-el {
+    font-size: 1.8rem;
+    font-weight: 600;
 }
 
 #intro p {
@@ -84,4 +120,16 @@ label {
     font-weight: 500;
     font-size: 1.125rem;
 }
+
+#built {
+    text-decoration: none;
+    color: black;
+}
+
+#built:hover {
+    opacity: .7;
+}
+
+
+
 
