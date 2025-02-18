@@ -30,14 +30,16 @@ function displayItems(){
       items += `<div class="item">
                   <div class="input-controller">
                     <textarea disabled>${itemsArray[i]}</textarea>
+                  </div>
+                  <div class="controller-container">
                     <div class="edit-controller">
-                      <i class="fa-solid fa-check deleteBtn"></i>
+                      <i class="fa-regular fa-trash-can deleteBtn"></i>
                       <i class="fa-solid fa-pen-to-square editBtn"></i>
                     </div>
-                  </div>
-                  <div class="update-controller">
-                    <button class="saveBtn">Save</button>
-                    <button class="cancelBtn">Cancel</button>
+                    <div class="update-controller">
+                      <button class="saveBtn">Save</button>
+                      <button class="cancelBtn">Cancel</button>
+                    </div>
                   </div>
                 </div>`
     }
