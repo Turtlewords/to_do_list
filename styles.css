@@ -59,22 +59,27 @@ header {
 #input {
     padding: .5rem;
     width: 80%;
-    max-width: 375px;
+    max-width: 250px;
+    resize: none;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
    
 }
 
-#submit-btn {
-    width: 40%;
-    max-width: 250px;
+.btn {
+    width: 140px;
     margin: 0 auto;
     padding: .75rem;
     font-family: "Edu QLD Beginner", serif; 
     font-weight: 600;
+    cursor: pointer;
     text-transform: uppercase;
     font-size: 1.125rem;
     background-color: whitesmoke;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.btn:hover, .btn:focus {
+    opacity: 0.7;
 }
 
 #notes {
@@ -83,7 +88,7 @@ header {
 
 .to-do-list {
     border: 2px solid red;
-    width: 100%;
+    
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: .5rem;
@@ -169,6 +174,11 @@ label {
 @media (min-width: 800px) {
     .container {
         display: flex;
+        margin-left: 2%;
+    }
+
+    .inner-container {
+        width: 40%;
     }
 }
 

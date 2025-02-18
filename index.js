@@ -1,10 +1,17 @@
 const dateEl = document.getElementById("date-el");
 const input = document.getElementById("input");
 const submitBtn = document.getElementById("submit-btn");
+const clearBtn = document.getElementById("clear-btn");
 
 
 const itemsArray = localStorage.getItem("items") ? JSON.parse(localStorage.getItem("items")) : [];
 
+clearBtn.addEventListener("click", () => {
+  
+  localStorage.removeItem("items");
+  location.reload();
+ 
+})
 
 
 submitBtn.addEventListener("click", () => {
