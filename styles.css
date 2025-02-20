@@ -118,6 +118,7 @@ header {
     font-weight: 700;
     font-size: 1.175rem;
     resize: none;
+    margin: 0 auto;
 }
 
 .saveBtn, .cancelBtn {
@@ -208,6 +209,10 @@ label {
 @media (min-width: 1000px) {
     .to-do-list {
         grid-template-columns: repeat(4, 1fr);
+    }
+
+    .item textarea {
+        width: 96%;
     }
 }
 
