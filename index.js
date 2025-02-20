@@ -7,14 +7,21 @@ const clearBtn = document.getElementById("clear-btn");
 const itemsArray = localStorage.getItem("items") ? JSON.parse(localStorage.getItem("items")) : [];
 
 clearBtn.addEventListener("click", () => {
-  
-  localStorage.removeItem("items");
+  if (itemsArray.length < 1) {
+    alert("No notes to clear!")
+    return
+  }
+  let answer = prompt("Are you sure you want to clear the list?");
+  if (answer != null) {
+    localStorage.removeItem("items");
   location.reload();
- 
+  }
+  
 })
 
 
 submitBtn.addEventListener("click", () => {
+  
   if (input.value == "") {
     alert("No empty notes allowed!")
     return;
@@ -40,12 +47,13 @@ function displayItems(){
                   </div>
                   <div class="controller-container">
                     <div class="edit-controller">
-                      <i class="fa-regular fa-trash-can deleteBtn"></i>
-                      <i class="fa-solid fa-pen-to-square editBtn"></i>
+                      <i title="Delete" class="fa-regular fa-trash-can deleteBtn"></i>
+                      <i title="Edit" class="fa-solid fa-pen-to-square editBtn"></i>
                     </div>
                     <div class="update-controller">
-                      <button class="saveBtn">Save</button>
-                      <button class="cancelBtn">Cancel</button>
+                      
+                      <i title="Save" class="fa-regular fa-floppy-disk saveBtn"></i>
+                      <i title="Cancel" class="fa-solid fa-xmark cancelBtn"></i>
                     </div>
                   </div>
                 </div>`

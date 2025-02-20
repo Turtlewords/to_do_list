@@ -78,7 +78,7 @@ header {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
-.btn:hover, .btn:focus {
+.btn:hover {
     opacity: 0.7;
 }
 
@@ -87,38 +87,57 @@ header {
 }
 
 .to-do-list {
-    border: 2px solid red;
     
+    background-image: url("images/cork.jpg");
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: .5rem;
     row-gap: .5rem;
     overflow: auto;
     max-height: 100%;
-    margin: 1rem;
+    min-height: 140px;
+    max-width: 450px;
+    
+    margin: 1rem auto;
     padding: 1rem;
 }
 
 .item {
+    padding: .5rem;
     
-    max-width: 200px;
+    max-width: 220px;
     height: 80px;
-    background-color: blanchedalmond;
+    background-color: #FED800;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 2px;
 }
 
 .item textarea {
     font-family: "Caveat", serif;
-    width: 90%;
+    width: 96%;
     font-weight: 700;
     font-size: 1.175rem;
     resize: none;
 }
 
+.saveBtn, .cancelBtn {
+    font-family: "Edu QLD Beginner", serif; 
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+
 .controller-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: .5rem;
+}
+
+.saveBtn:hover, .cancelBtn:hover {
+    opacity: 0.7;
+    cursor: pointer;
 }
 
 .deleteBtn:hover, .editBtn:hover {
@@ -175,6 +194,10 @@ label {
     .container {
         display: flex;
         margin-left: 2%;
+    }
+
+    .to-do-list {
+        min-width: 472px;
     }
 
     .inner-container {
